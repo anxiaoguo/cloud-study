@@ -1,0 +1,9 @@
+routing路由模式，是在发布订阅模式上的一个升级
+
+变化在于，可以给指定的消费者发送消息
+
+在routing模式下：
+1.队列与交换机的绑定不能是任意绑定了，而是要指定一个routingKey
+2.消息的发送方在向exchange发送消息时，也必须指定消息的routingkey
+3.exchange不再把消息交给每一个指定的队列，而是根据消息的routingkey进行判断，
+只有队列的routingkey与消息的routingkey完全一致，才会接收到消息流程
