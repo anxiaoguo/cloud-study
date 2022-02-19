@@ -1,0 +1,9 @@
+此文件夹中的类，用于模拟订单超时处理消息机制
+
+Consumer2：订单超时后去进行取消订单的类
+
+RabbitMqConfig：配置死信队列绑定的交换机及routingkey信息及时间到期后转发到的队列和rountingkey信息
+
+RabbitMQUtils：工具类 用于生成channel 和 connection 和关闭资源信息
+
+RabbitMQTest：测试类，当用户点击生成订单后就发送消息到死信队列

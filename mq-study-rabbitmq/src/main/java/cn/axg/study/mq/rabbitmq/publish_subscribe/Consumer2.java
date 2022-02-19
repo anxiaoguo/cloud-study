@@ -13,6 +13,7 @@ public class Consumer2 {
     public static void main(String[] args) throws IOException {
         Connection connection = RabbitMQUtils.getConnection();
         Channel channel = connection.createChannel();
+        channel.basicQos(1);
         //通道绑定交换机
         channel.exchangeDeclare("exchange_logs", "fanout");
         //临时队列
@@ -20,10 +21,12 @@ public class Consumer2 {
         //交换机跟队列进行绑定
         channel.queueBind(queueName, "exchange_logs", "");
         //接收消息(具体的业务操作)
-        channel.basicConsume(queueName, true, new DefaultConsumer(channel){
+        channel.basicConsume(queueName, false, new DefaultConsumer(channel){
             @Override
             public void handleDelivery(String consumerTag, Envelope envelope, AMQP.BasicProperties properties, byte[] body) throws IOException {
                 System.out.println("消费者2====>" + new String(body));
+                //手动进行消息确认
+                channel.basicAck(envelope.getDeliveryTag(), false);
             }
         });
     }
