@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.axg.study.redis.mapper.UserMapper">
+
+    <!--    开启mybatis二级缓存 并指向自定义实现
+            这种方式在不是多表查询下，没有问题，一旦涉及多表就有问题了，解决方案：共享缓存（如下）
+    -->
+<!--    <cache type="cn.axg.study.redis.config.RedisCache"/>-->
+
+    <cache-ref namespace="cn.axg.study.redis.mapper.OrderMapper"/>
+
+
+    <delete id="delete">
+        delete from users where id=#{id}
+    </delete>
+
+    <select id="findAll" resultMap="userMap">
+        select u.*,o.id as oid,o.total_price,o.user_id from users as u left join orders as o
+        on o.user_id=u.id
+    </select>
+    <select id="findOne" resultType="cn.axg.study.redis.model.User">
+        select * from users where id=#{id}
+    </select>
+
+    <resultMap id="userMap" type="user">
+        <id property="id" column="id"/>
+        <result property="username" column="username"/>
+        <result property="password" column="password"/>
+        <result property="birthday" column="birthday"/>
+
+        <collection property="orderList" column="user_id" ofType="Order" resultMap="orderMap"/>
+    </resultMap>
+
+    <resultMap id="bookMap" type="book">
+        <id property="id" column="id"/>
+        <result property="name" column="name"/>
+        <result property="number" column="number"/>
+    </resultMap>
+
+    <resultMap id="orderMap" type="order">
+        <id property="id" column="oid"/>
+        <result property="totalPrice" column="total_price"/>
+        <result property="userId" column="user_id"/>
+    </resultMap>
+
+</mapper>

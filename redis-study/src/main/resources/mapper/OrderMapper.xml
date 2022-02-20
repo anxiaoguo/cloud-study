@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.axg.study.redis.mapper.OrderMapper">
+
+    <cache type="cn.axg.study.redis.config.RedisCache"/>
+
+    <select id="findAll" resultMap="cn.axg.study.redis.mapper.UserMapper.orderMap">
+        select id as oid,total_price,user_id from orders
+    </select>
+
+    <delete id="deleteById" parameterType="int">
+        delete from orders where id=#{id}
+    </delete>
+</mapper>
