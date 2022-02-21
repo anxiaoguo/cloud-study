@@ -6,16 +6,12 @@
  */
 package ${controllerUrl};
 
-import ${abstractControllerUrl}.AbstractController;
-import ${entityUrl}.${entityName};
-import ${serviceUrl}.${entityName}Service;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+
 <#if isSwagger=="true" >
 import io.swagger.annotations.Api;
 </#if>
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 /**   
  * <p>自动生成工具：mybatis-dsc-generator</p>
  * 
@@ -30,8 +26,7 @@ import org.slf4j.LoggerFactory;
 </#if>
 @RestController
 @RequestMapping("/${objectName}")
-public class ${entityName}Controller extends AbstractController<${entityName}Service,${entityName}>{
+public class ${entityName}Controller {
 
-	Logger logger = LoggerFactory.getLogger(this.getClass());
-	
+
 }

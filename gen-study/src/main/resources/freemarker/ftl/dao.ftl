@@ -19,7 +19,7 @@ import ${entityUrl}.${entityName};
  * 
  */
 @Mapper
-public interface ${entityName}Dao extends BaseMapper<${entityName}> {
+public interface ${entityName}Mapper extends BaseMapper<${entityName}> {
 	
 }
 	

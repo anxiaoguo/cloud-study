@@ -73,7 +73,7 @@ public class Generator {
 	
 	//⑥创建CONTROLLER
 	public static ResultJson createController(String url,BasisInfo bi) {
-		createAbstractController( url, bi); //保证父类一直存在
+//		createAbstractController( url, bi); //保证父类一直存在
 		String fileUrl= getGeneratorFileUrl(url, bi.getControllerUrl(), bi.getEntityName(), CONTROLLER);
 		return FreemarkerUtil.createFile(bi, "controller.ftl", fileUrl);
 	}
@@ -94,7 +94,7 @@ public class Generator {
 		if (type.equals("entity")) {
 			return url+pageToUrl(packageUrl)+entityName+".java";
 		}else if(type.equals("dao")) {
-			return url+pageToUrl(packageUrl)+entityName+"Dao.java";
+			return url+pageToUrl(packageUrl)+entityName+"Mapper.java";
 		}else if(type.equals("daoImpl")) {
 			return url+pageToUrl(packageUrl)+entityName+"Mapper.xml";
 		}else if(type.equals("service")) {
