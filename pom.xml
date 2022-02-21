@@ -13,6 +13,7 @@
         <module>mq-study-rabbitmq</module>
         <module>test-study</module>
         <module>redis-study</module>
+        <module>swagger-study</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
