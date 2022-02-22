@@ -14,6 +14,7 @@
         <module>test-study</module>
         <module>redis-study</module>
         <module>swagger-study</module>
+        <module>commons-stydy</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
