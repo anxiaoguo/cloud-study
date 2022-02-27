@@ -179,6 +179,7 @@ public class TestStream {
         builder.add(new Date());
         builder.add("csd");
 
+
         Stream<Object> build = builder.build();
         build.forEach(i -> System.out.println(i));
     }
