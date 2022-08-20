@@ -21,10 +21,10 @@ import java.util.Date;
  */
 public class MyGenerator {
 		/////////////////项目基础包前缀//////////////////////
-		private static final String basePackage = "com.axg.boot";
+		private static final String basePackage = "cn.axg.common";
 
 		// 基础信息：项目名、作者、版本
-		public static final String PROJECT = "naco-study";
+		public static final String PROJECT = "commons-api";
 		public static final String AUTHOR = "anxiaoguo";
 		public static final String VERSION = "V1.0";
 		// 数据库连接信息：连接URL、用户名、秘密、数据库名
@@ -57,7 +57,7 @@ public class MyGenerator {
 		bi.setEntityComment(CLASSCOMMENT);
 		try {
 			bi = EntityInfoUtil.getInfo(bi);
-			String fileUrl = "D:\\project\\cloud-study\\swagger-study\\src\\main\\java\\";// 生成文件存放位置
+			String fileUrl = "D:\\project\\cloud-study\\commons-api\\src\\main\\java\\";// 生成文件存放位置
 			//项目命名要规范，路径名和项目名中不能包含java字眼
 			String mapperUrl = fileUrl.replaceFirst("java", "resources");
 

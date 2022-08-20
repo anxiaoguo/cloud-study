@@ -14,9 +14,12 @@
         <module>test-study</module>
         <module>redis-study</module>
         <module>swagger-study</module>
-        <module>commons-stydy</module>
+        <module>commons-study</module>
         <module>jwt-study</module>
-        <module>commons-cn.axg.common.api</module>
+        <module>commons-api</module>
+        <module>shiro-study</module>
+        <module>shiro-jwt-study</module>
+        <module>tencent-cloud-signature</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

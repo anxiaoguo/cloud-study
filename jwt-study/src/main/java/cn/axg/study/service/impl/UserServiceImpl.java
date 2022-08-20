@@ -2,11 +2,10 @@ package cn.axg.study.service.impl;
 
 import cn.axg.common.api.Asserts;
 import cn.axg.common.api.CommonResult;
-import cn.axg.study.jwt.jdk.JwtUtils;
+import cn.axg.study.utils.JwtUtils;
 import cn.axg.study.mapper.UserMapper;
 import cn.axg.study.model.User;
 import cn.axg.study.service.UserService;
-import javafx.scene.control.Alert;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

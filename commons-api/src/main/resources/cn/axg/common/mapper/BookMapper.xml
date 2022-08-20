@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="cn.axg.common.mapper.BookMapper">
+
+	<resultMap id="BaseResultMap" type="cn.axg.common.model.Book">
+		<id column="id" property="id" />
+		<id column="name" property="name" />
+		<id column="number" property="number" />
+	</resultMap>
+	<sql id="Base_Column_List">
+		id, name, number
+	</sql>
+	
+</mapper>

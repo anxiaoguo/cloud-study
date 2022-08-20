@@ -18,6 +18,9 @@ public class User implements Serializable {
     @NotBlank(message = "密码不能为空")
     private String password;
 
+    @NotBlank(message = "性别不能为空")
+    private String gender;
+
     @JsonFormat(pattern = "yyyy-MM-dd",timezone = "GMT+8")
     private Date birtdhay;
 

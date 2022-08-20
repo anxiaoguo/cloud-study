@@ -31,4 +31,10 @@ public class Test {
         list.add(order2);
         System.out.println(list);
     }
+
+    @org.junit.Test
+    public void test2(){
+//        String s = SmsTemplateCodeEnum.getTemplateByIndex(2).toString();
+//        System.out.println(s);
+    }
 }

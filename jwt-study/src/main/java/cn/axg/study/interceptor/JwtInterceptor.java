@@ -1,8 +1,7 @@
 package cn.axg.study.interceptor;
 
 import cn.axg.common.api.CommonResult;
-import cn.axg.common.exception.ApiException;
-import cn.axg.study.jwt.jdk.JwtUtils;
+import cn.axg.study.utils.JwtUtils;
 import com.auth0.jwt.exceptions.AlgorithmMismatchException;
 import com.auth0.jwt.exceptions.SignatureVerificationException;
 import com.auth0.jwt.exceptions.TokenExpiredException;

@@ -1,4 +1,4 @@
-package cn.axg.study.jwt.jdk;
+package cn.axg.study.utils;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
