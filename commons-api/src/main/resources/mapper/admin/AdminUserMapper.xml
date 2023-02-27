@@ -14,5 +14,11 @@
     <sql id="Base_Column_List">
         id, username, pwd, gender, create_time, update_time, deleted
     </sql>
+    <insert id="saveBatchByNative">
+        insert into admin_user(username,pwd,gender,create_time,update_time,deleted) values
+        <foreach collection="list" separator="," item="item">
+            (#{item.username},#{item.pwd},#{item.gender},#{item.createTime},#{item.updateTime},#{item.deleted})
+        </foreach>
+    </insert>
 
 </mapper>

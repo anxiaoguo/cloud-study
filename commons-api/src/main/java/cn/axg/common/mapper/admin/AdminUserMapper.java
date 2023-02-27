@@ -10,6 +10,8 @@ import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import org.apache.ibatis.annotations.Mapper;
 import cn.axg.common.model.admin.AdminUser;
 
+import java.util.List;
+
 /**
 * <p>自动生成工具：mybatis-dsc-generator</p>
 *
@@ -21,4 +23,5 @@ import cn.axg.common.model.admin.AdminUser;
 @Mapper
 public interface AdminUserMapper extends BaseMapper<AdminUser> {
 
+    boolean saveBatchByNative(List<AdminUser> list);
 }

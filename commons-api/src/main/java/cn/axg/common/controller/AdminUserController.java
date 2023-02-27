@@ -6,6 +6,8 @@
  */
 package cn.axg.common.controller;
 
+import cn.axg.common.annotation.RepeatSubmit;
+import cn.axg.common.annotation.RequestLimiter;
 import cn.axg.common.dto.AdminUserDTO;
 import cn.axg.common.model.admin.AdminUser;
 import cn.axg.common.service.AdminUserService;
@@ -21,9 +23,9 @@ import java.util.List;
  * <p>自动生成工具：mybatis-dsc-generator</p>
  *
  * <p>说明： 后台用户信息表API接口层</P>
- * @version V1.0
- * @author 安晓国
  *
+ * @author 安晓国
+ * @version V1.0
  */
 @Api(tags = "后台用户信息表", value = "后台用户信息表")
 @RestController
@@ -36,12 +38,22 @@ public class AdminUserController {
 
     /**
      * 根据性别查询信息
+     *
      * @return
      */
+    @RepeatSubmit
     @PostMapping("/getInfo")
     public List<AdminUser> getInfo(@RequestBody @Validated AdminUserDTO adminUserDTO) {
         List<AdminUser> list = adminUserService.list(new LambdaQueryWrapper<AdminUser>().eq(AdminUser::getGender, adminUserDTO.getGender()));
         return list;
     }
+
+    @RequestLimiter(QPS = 5D, timeout = 200, msg = "玩命加载中,请稍后再试")
+    @ResponseBody
+    @GetMapping("/test")
+    public String test() {
+        return "我是傻逼";
+    }
+
 
 }

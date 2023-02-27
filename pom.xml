@@ -20,6 +20,7 @@
         <module>shiro-study</module>
         <module>shiro-jwt-study</module>
         <module>tencent-cloud-signature</module>
+        <module>microservice-study</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
