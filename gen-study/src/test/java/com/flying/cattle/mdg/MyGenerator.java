@@ -23,14 +23,14 @@ import java.util.Map;
  */
 public class MyGenerator {
     // 基础信息：项目名、作者、版本
-    public static final String PROJECT = "cloud-study";
+    public static final String PROJECT = "seata-study-stock";
     public static final String AUTHOR = "安晓国";
     public static final String VERSION = "V1.0";
     // 数据库连接信息：连接URL、用户名、秘密、数据库名
-    public static final String URL = "jdbc:mysql://127.0.0.1:3306/cloud-study?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC";
+    public static final String URL = "jdbc:mysql://127.0.0.1:3306/stock?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC";
     public static final String NAME = "root";
     public static final String PASS = "root";
-    public static final String DATABASE = "cloud-study";
+    public static final String DATABASE = "stock";
     // 类信息：类名、对象名（一般是【类名】的首字母小些）、类说明、时间
     //public static final String CLASSNAME = "LiveProductActivity";
     public static final String TABLE = "admin_user";
@@ -40,23 +40,23 @@ public class MyGenerator {
     //是否是Swagger配置
     public static final String IS_SWAGGER = "true";
     /////////////////项目基础包前缀//////////////////////
-    private static final String basePackage = "cn.axg.common";
-    private static final String modelName = "admin";
+    private static final String basePackage = "com.axg.cloud.study";
+    private static final String modelName = "";
     public static final String SERVICE_URL = basePackage + ".service";
     public static final String SERVICE_IMPL_URL = basePackage + ".service.impl";
     public static final String CONTROLLER_URL = basePackage + ".controller";
     // 路径信息，分开路径方便聚合工程项目，微服务项目
-    public static final String ENTITY_URL = "cn.axg.common.model." + modelName;
-    public static final String DAO_URL = "cn.axg.common.mapper." + modelName;
+    public static final String ENTITY_URL = "com.axg.cloud.study.model." + modelName;
+    public static final String DAO_URL = "com.axg.cloud.study.mapper." + modelName;
     public static final String XML_URL = "mapper." + modelName;
-    private static final String mapperFileUrl = "D:\\project\\cloud-study\\commons-api\\src\\main\\java\\";// 生成文件存放位置
-    private static final String mapperXmlUrl = "D:\\project\\cloud-study\\commons-api\\src\\main\\resources\\";// 生成文件存放位置
+    private static final String mapperFileUrl = "D:\\project\\cloud-study\\seata-study-stock\\src\\main\\java\\";// 生成文件存放位置
+    private static final String mapperXmlUrl = "D:\\project\\cloud-study\\seata-study-stock\\src\\main\\resources\\";// 生成文件存放位置
 
-    private static final String fileUrl = "D:\\project\\cloud-study\\commons-api\\src\\main\\java\\";// 生成文件存放位置
+    private static final String fileUrl = "D:\\project\\cloud-study\\seata-study-stock\\src\\main\\java\\";// 生成文件存放位置
 
     public static void main(String[] args) {
         Map<String, String> tables = new HashMap<>();
-        tables.put("admin_user", "后台用户信息表");
+        tables.put("stock_at", "库存表");
         /*
         tables.put("shop_user", "商户用户信息表");
         tables.put("shop_wallet", "商户钱包表");

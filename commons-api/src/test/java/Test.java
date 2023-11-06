@@ -4,16 +4,18 @@ import org.omg.PortableInterceptor.INACTIVE;
 
 import java.math.BigDecimal;
 import java.text.DecimalFormat;
-import java.util.Arrays;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
+import java.util.*;
 import java.util.stream.Collectors;
 
 public class Test {
 
     @org.junit.Test
     public void test(){
+
+        Map<String,String> map = new HashMap<>(3);
+
+        map.put("1","jack");
+
 //        Long x = 3L;
 //        System.out.println(!Arrays.asList(3L, 2L, 21L).contains(x));
 //        Long x = 88888888L;

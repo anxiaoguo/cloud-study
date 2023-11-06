@@ -51,7 +51,6 @@
                     <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
                 </exclusion>
             </exclusions>
-
         </dependency>
 
 

@@ -2,11 +2,13 @@ package cn.axg.study.commons.model;
 
 public class User {
 
+
     private String name;
 
     private String phone;
 
     private Address address;
+
 
     public String getName() {
         return name;

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.axg.cloud.study.mapper.StockAtMapper">
+
+    <resultMap id="BaseResultMap" type="com.axg.cloud.study.model.StockAt">
+        <id column="id" property="id"/>
+        <id column="product_id" property="productId"/>
+        <id column="count" property="count"/>
+        <id column="money" property="money"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+        id, product_id, count, money
+    </sql>
+    <update id="decrStock">
+        update stock_at set count=count-1 where product_id=1
+    </update>
+
+</mapper>

@@ -19,8 +19,10 @@
         <module>commons-api</module>
         <module>shiro-study</module>
         <module>shiro-jwt-study</module>
-        <module>tencent-cloud-signature</module>
         <module>microservice-study</module>
+        <module>seata-study-order</module>
+        <module>seata-study-stock</module>
+        <module>spring-study</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
