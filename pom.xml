@@ -23,6 +23,7 @@
         <module>seata-study-order</module>
         <module>seata-study-stock</module>
         <module>spring-study</module>
+        <module>playwrightdemo</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

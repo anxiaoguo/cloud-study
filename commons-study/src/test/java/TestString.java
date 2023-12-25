@@ -4,9 +4,39 @@ import cn.axg.study.commons.model.Person;
 import cn.axg.study.commons.model.XIAOAN;
 import org.junit.Test;
 
+import javax.activation.CommandInfo;
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
+import java.net.URLEncoder;
 import java.util.*;
+import java.util.stream.Collectors;
 
 public class TestString {
+
+
+
+
+    @Test
+    public void test666() throws UnsupportedEncodingException {
+
+//            System.out.println(URLEncoder.encode("孤傲苍狼", "UTF-8"));
+//            String decode = URLDecoder.decode("%E5%AD%A4%E5%82%B2%E8%8B%8D%E7%8B%BC","utf-8");
+//            System.out.println(decode);
+
+//        String encoded = URLEncoder.encode("Hello World!", "UTF-8");
+//        System.out.println(encoded);  // 输出：Hello+World%21
+
+
+        // URL解码示例
+        String decoded = URLDecoder.decode("Hello+World%21", "UTF-8");
+        System.out.println(decoded);  // 输出：Hello World!
+//        String[] str = null;
+//
+//        List<String> collect = Arrays.stream(str).collect(Collectors.toList());
+//        System.out.println(collect);
+
+    }
+
 
     @Test
     public void test() {

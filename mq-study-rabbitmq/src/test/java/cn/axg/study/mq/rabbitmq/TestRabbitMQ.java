@@ -45,7 +45,7 @@ public class TestRabbitMQ {
     @Test
     public void provider1(){
         //向名字为hello-springboot的队列发送消息
-        rabbitTemplate.convertAndSend("hello-springboot","i love you");
+        rabbitTemplate.convertAndSend("hello","i love you");
     }
 
 }

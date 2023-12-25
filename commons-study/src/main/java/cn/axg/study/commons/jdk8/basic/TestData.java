@@ -6,6 +6,7 @@ import org.junit.Test;
 import org.springframework.beans.factory.support.DefaultSingletonBeanRegistry;
 
 import java.sql.SQLOutput;
+import java.util.HashMap;
 import java.util.Properties;
 
 @Data
@@ -44,6 +45,8 @@ public class TestData {
         String xx = this.person.choose("好好好");
 
         System.out.println(xx);
+
+
 
 
 

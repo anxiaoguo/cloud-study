@@ -1,7 +1,13 @@
 package cn.axg.study.commons.model;
 
-public class XIAOAN extends Man{
+public class XIAOAN extends Man implements Comparable<XIAOAN>{
 
+
+    @Override
+    public int compareTo(XIAOAN o) {
+        return 0;
+
+    }
 
     public XIAOAN() {
         super("我不知道你在干什么");
